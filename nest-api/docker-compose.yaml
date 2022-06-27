@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    #entrypoint: ./.docker/entrypoint.sh
+    ports:
+      - 3001:3001
+    volumes:
+      - .:/home/node/app
+    extra_hosts:
+      - 'host.docker.internal:192.168.100.142'
